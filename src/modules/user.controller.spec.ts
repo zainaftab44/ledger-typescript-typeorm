@@ -1,15 +1,10 @@
-import { Test, TestingModule } from '@nestjs/testing';
-import { UserController } from './user.controller';
-import { UserService } from './user.service';
+import { Test } from '@nestjs/testing';
 import { User } from '../repositories/User.entity';
-import { userdto } from 'src/dto/userdto';
 import { INestApplication } from '@nestjs/common';
 import { Repository } from 'typeorm';
 import * as request from 'supertest';
 import { UserModule } from './user.module';
-import { typeORMConfig } from '../configs/typeorm.config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { ConfigModule } from '@nestjs/config';
 
 describe('UserController', () => {
     let app: INestApplication;
